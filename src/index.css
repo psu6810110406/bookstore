@@ -1,0 +1,57 @@
+
+/* ================================================= */
+/* เพิ่ม/แก้ไข ส่วนนี้ในไฟล์ src/index.css */
+/* ================================================= */
+
+/* 1. จัดพื้นหลังและกึ่งกลางหน้าจอ */
+/* Overrides body style to center the content vertically and horizontally */
+body {
+  /* รักษาสไตล์เดิมของ body (ถ้ามี) */
+  margin: 0;
+  padding: 0; 
+  /* สไตล์ใหม่สำหรับการจัดกึ่งกลาง */
+  background-color: #f0f2f5; /* สีพื้นหลังอ่อนๆ สบายตา */
+  display: flex; 
+  justify-content: center; /* จัดกึ่งกลางแนวนอน */
+  align-items: center;    /* จัดกึ่งกลางแนวตั้ง */
+  min-height: 100vh;      /* ความสูงเต็มหน้าจอ */
+}
+
+/* 2. กล่องฟอร์มล็อกอิน (Container for Ant Design Form) */
+.login-box {
+  width: 400px; 
+  padding: 40px;
+  background-color: white;
+  border-radius: 10px;
+  /* เพิ่มเงาให้กล่องดูมีมิติและลอยออกมา */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15); 
+}
+
+/* 3. จัดหัวข้อ H2 (ที่เราจะเพิ่มใน JSX) */
+.login-box h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #333; /* สีตัวอักษรเข้ม */
+}
+
+/* 4. ปรับปุ่ม Ant Design ให้เต็มความกว้าง */
+/* Target ปุ่มหลักของ Ant Design ที่มี type="primary" */
+.login-box .ant-btn-primary {
+  width: 100%; /* ให้ปุ่มเต็มความกว้างของ login-box */
+  height: 45px; /* เพิ่มความสูงของปุ่ม */
+  font-size: 1.1em;
+  border-radius: 6px;
+}
+
+/* 5. ปรับ Input ของ Ant Design (Optional: เพื่อให้ดูเนี๊ยบขึ้น) */
+.login-box .ant-input,
+.login-box .ant-input-password {
+    border-radius: 6px;
+}
+.login-box .ant-input:focus,
+.login-box .ant-input-password:focus,
+.login-box .ant-input-focused,
+.login-box .ant-input-password-focused {
+    /* เปลี่ยนสีขอบเมื่อโฟกัสเป็นสีน้ำเงินเข้มขึ้น */
+    border-color: #0056b3 !important; 
+}
