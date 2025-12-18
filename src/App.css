@@ -41,3 +41,6 @@
   color: #888;
 }
 
+.red-row td {
+  background-color: #f7c2c5 !important; 
+}
